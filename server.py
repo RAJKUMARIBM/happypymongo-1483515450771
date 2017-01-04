@@ -38,11 +38,6 @@ print db
 print("----------------------------------")
 
 
-
-print("hai   5")
-print("----------------------------------")
-print client.database_names()
-
 httpd = Server(("", PORT), Handler)
 try:
     print("Start serving at port %i" % PORT)
@@ -53,4 +48,3 @@ httpd.server_close()
 
 print("hai   5")
 print("----------------------------------")
-print client.database_names()
