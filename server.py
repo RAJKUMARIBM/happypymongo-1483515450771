@@ -43,7 +43,7 @@ db = client.test_database
 collection = db['test-collection']
 print db
 post = {"author": "Mike", "text": "My first blog post!", "tags": ["mongodb", "python", "pymongo"]}
-collection.insert_one(post)
+collection.insert_one({"author":"MIKE"})
 
 
 
