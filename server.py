@@ -40,8 +40,14 @@ print("----------------------------------")
 print('############# CCODE RUN FROM HERE ################')
 db = client['test-database']
 db = client.test_database
-#post = {"author": "Mike", "text": "My first blog post!", "tags": ["mongodb", "python", "pymongo"]}
-#resa=db.insert(post)
+post = {"author": "Mike", "text": "My first blog post!", "tags": ["mongodb", "python", "pymongo"]}
+db.insert(post)
+
+red=db.count()
+print("----------------------------------")
+print('Now accesed succesfullty')
+print(red)
+print("----------------------------------")
 #sse=db.collection_names()
 #print sse
 #posts = db.posts
