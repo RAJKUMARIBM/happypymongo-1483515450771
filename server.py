@@ -40,8 +40,9 @@ print("----------------------------------")
 print('############# CCODE RUN FROM HERE ################')
 db = client['test-database']
 db = client.test_database
+print db
 post = {"author": "Mike", "text": "My first blog post!", "tags": ["mongodb", "python", "pymongo"]}
-db.delcontent1.insert_one(post)
+
 
 
 print("----------------------------------")
