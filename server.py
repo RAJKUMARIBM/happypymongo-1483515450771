@@ -40,8 +40,10 @@ print("----------------------------------")
 print('############# CCODE RUN FROM HERE ################')
 db = client['test-database']
 db = client.test_database
+collection = db['test-collection']
 print db
 post = {"author": "Mike", "text": "My first blog post!", "tags": ["mongodb", "python", "pymongo"]}
+collection.insert_one(post)
 
 
 
@@ -69,3 +71,5 @@ httpd.server_close()
 
 print("hai   5")
 print("----------------------------------")
+
+print("-------------------OVER-----------------------")
