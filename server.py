@@ -2,6 +2,8 @@ import os
 import pymongo
 # import ssl
 import json
+from pymongo import Connection
+connection = Connection()
 from pymongo import MongoClient
 
 try:
@@ -25,6 +27,7 @@ print("----------------------------------")
 services = os.getenv('VCAP_SERVICES')
 services_json = json.loads(services)
 mongodb_url = services_json['compose-for-mongodb'][0]['credentials']['uri']
+
 print("hai   3")
 print("----------------------------------")
 # connect:
@@ -36,6 +39,16 @@ db = client.get_default_database()
 print('connected to mongodb!, welcome to mongodb connection, have a fun')
 print db
 print("----------------------------------")
+print('############# CCODE RUN FROM HERE ################')
+db = connection['test-database']
+
+post = {"author": "Mike", "text": "My first blog post!", "tags": ["mongodb", "python", "pymongo"]}
+posts = db.posts
+posts.insert(post)
+cc=posts.find_one({"author": "Mike"})
+for reget in cc:
+	print reget
+print('############# CCODE completed HERE ################')	
 
 
 httpd = Server(("", PORT), Handler)
