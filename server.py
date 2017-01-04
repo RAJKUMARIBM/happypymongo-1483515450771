@@ -40,10 +40,10 @@ print("----------------------------------")
 print('############# CCODE RUN FROM HERE ################')
 db = client['test-database']
 db = client.test_database
-post = {"author": "Mike", "text": "My first blog post!", "tags": ["mongodb", "python", "pymongo"]}
-resa=db.insert(post)
-sse=db.collection_names()
-print sse
+#post = {"author": "Mike", "text": "My first blog post!", "tags": ["mongodb", "python", "pymongo"]}
+#resa=db.insert(post)
+#sse=db.collection_names()
+#print sse
 #posts = db.posts
 #posts.insert(post)
 #cc=posts.find_one({"author": "Mike"})
