@@ -35,6 +35,8 @@ print("----------------------------------")
 db = client.get_default_database()
 print('connected to mongodb!, welcome to mongodb connection, have a fun')
 print db
+db.web_cont.insert({"ilock":"y"})
+
 print("----------------------------------")
 
 
